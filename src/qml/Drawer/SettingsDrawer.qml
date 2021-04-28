@@ -65,7 +65,7 @@ Drawer {
                                 "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1459513911&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software")
                 else
                     Qt.openUrlExternally(
-                                "https://play.google.com/store/apps/details?id=org.dontpanic")
+                                "https://open-store.io/app/mind")
             }
         }
 
@@ -98,6 +98,7 @@ Drawer {
 
         ItemDelegate {
             text: qsTrId("import-export")
+            visible: false
             width: parent.width
             onClicked: {
                 stackView.pop(null);

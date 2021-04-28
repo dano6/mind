@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Mind
+Keywords=mind;
+Exec=./opt/Mind/bin/Mind
+Icon=icon_high.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+X-Ubuntu-Splash-Color=#673AB7
+X-Ubuntu-Splash-Image=icon_high.png
+Name[cs]=Nepanikař
+Name[de]=Keine Panik
+Name[en]=Don't panic
+Name[es]=No haga pánico
+Name[fr]=Panique pas
+Name[it]=Niente Panico
+Name[pl]=Nie panikuj
+Name[ru]=Без Паники
+Name[sk]=Nepanikár
+

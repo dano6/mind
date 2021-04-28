@@ -10,17 +10,17 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setOrganizationName("DontPanicDevs");
+    QCoreApplication::setOrganizationName("mind");
 
     qmlRegisterType<UserDataProvider>("io.qt.UserDataProvider", 1, 0, "UserDataProvider");
     qmlRegisterType<TranslatorAdapter>("io.qt.Translator", 1, 0, "Translator");
     qmlRegisterType<MathEngine>("io.qt.MathEngine", 1, 0, "MathEngine");
     qmlRegisterType<ImporterExporter>("io.qt.ImporterExporter", 1, 0, "ImporterExporter");
     qmlRegisterType<NativeInterface>("io.qt.NativeInterface", 1, 0, "NativeInterface");
-
+    qputenv("QT_SCALE_FACTOR", "2");
     QApplication app(argc, argv);
     QQmlApplicationEngine engine;
-    QSettings settings("DontPanicDevs", "DontPanic");
+    QSettings settings("mind", "DontPanic");
     UserDataProvider dataProvider;
 
     TranslatorAdapter::connectToApp(&app, &engine, dataProvider.loadLanguage());

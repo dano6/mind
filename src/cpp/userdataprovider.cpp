@@ -27,7 +27,7 @@ QString UserDataProvider::getSystemInfo()
     return QSysInfo::productType() + "|" + QSysInfo::productVersion();
 }
 
-UserDataProvider::UserDataProvider(QObject *parent) : QObject(parent), settings("DontPanicDevs", "DontPanic")
+UserDataProvider::UserDataProvider(QObject *parent) : QObject(parent), settings("mind", "DontPanic")
 {
 }
 

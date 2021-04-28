@@ -9,7 +9,7 @@
 
 bool ImporterExporter::importSettings(QUrl fileName)
 {
-    QSettings settings("DontPanicDevs", "DontPanic");
+    QSettings settings("mind", "DontPanic");
     QFile file(fileName.toLocalFile());
     if(!file.open(QFile::ReadOnly | QFile::Text))
         return false;
@@ -24,7 +24,7 @@ bool ImporterExporter::importSettings(QUrl fileName)
 
 bool ImporterExporter::exportSettings(QUrl fileName)
 {
-    QSettings settings("DontPanicDevs", "DontPanic");
+    QSettings settings("mind", "DontPanic");
     QMap<QString, QVariant> content;
     QStringList keys = settings.allKeys();
     QStringListIterator it(keys);

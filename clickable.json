@@ -1,0 +1,4 @@
+{
+	"qt_version": "5.12",
+        "builder": "qmake"
+}

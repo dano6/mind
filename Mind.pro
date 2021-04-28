@@ -101,4 +101,16 @@ ios: {
     LIBS += -framework UserNotifications
 }
 
+CONF_FILES += \
+    clickable.json \
+    click/manifest.json \
+    click/mind.desktop \
+    click/mind.apparmor \
+    images/icon_high.png
+
+
+config_files.path = /
+config_files.files += $${CONF_FILES}
+INSTALLS += config_files
+
 ANDROID_ABIS = armeabi-v7a arm64-v8a
