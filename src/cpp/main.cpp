@@ -11,13 +11,13 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication::setOrganizationName("mind");
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     qmlRegisterType<UserDataProvider>("io.qt.UserDataProvider", 1, 0, "UserDataProvider");
     qmlRegisterType<TranslatorAdapter>("io.qt.Translator", 1, 0, "Translator");
     qmlRegisterType<MathEngine>("io.qt.MathEngine", 1, 0, "MathEngine");
     qmlRegisterType<ImporterExporter>("io.qt.ImporterExporter", 1, 0, "ImporterExporter");
     qmlRegisterType<NativeInterface>("io.qt.NativeInterface", 1, 0, "NativeInterface");
-    qputenv("QT_SCALE_FACTOR", "2");
     QApplication app(argc, argv);
     QQmlApplicationEngine engine;
     QSettings settings("mind", "DontPanic");
