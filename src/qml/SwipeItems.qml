@@ -25,7 +25,7 @@ SwipePage {
                     anchors.verticalCenter: parent.verticalCenter
                     width: parent.width * 0.1
                 }
-                property var topText:  (withDescription) ? items[index * 2].trim() : tems[index].trim()
+                property var topText:  (withDescription) ? items[index * 2].trim() : items[index].trim()
                 property var bottomText: (withDescription) ? items[index * 2+1].trim() : ""
 
                 DescriptionLabel {

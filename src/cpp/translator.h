@@ -32,7 +32,11 @@ public:
     void static connectToApp(QApplication *app ,QQmlApplicationEngine *engine, QString language);
     Q_INVOKABLE static QList<QString> getLanguages() {return instance->languages;}
     Q_INVOKABLE static QList<QLocale::Language> getLanguagesLocale() {return instance->languagesLocale;}
+#if QT_VERSION <= 0x050F00
+    Q_INVOKABLE static QList<QString> getLanguagesExcept(QList<QString> excluded) {return (QSet<QString>(instance->languages.toSet()).subtract(excluded.toSet())).values();}
+#else
     Q_INVOKABLE static QList<QString> getLanguagesExcept(QList<QString> excluded) {return (QSet<QString>(instance->languages.begin(), instance->languages.end()).subtract(QSet<QString>(excluded.begin(), excluded.end()))).values();}
+#endif
     Q_INVOKABLE static void changeLanguage(QString language);
     Q_INVOKABLE static Translator *getInstance();
 private:

@@ -2,6 +2,7 @@
 #include <QSysInfo>
 #include "userdataprovider.h"
 #include "translator.h"
+#include <QVector>
 
 const std::vector<UserDataProvider::CustomInput> UserDataProvider::customInputs{{"reasons-example", "reasons", UserDataProvider::CustomInput::ARRAY},
                                                                         {"custom-write", "customWrite", UserDataProvider::CustomInput::STRING},
@@ -102,7 +103,7 @@ void UserDataProvider::translateDefault(CustomInput input)
                 return;
             for (auto &value : values)
                 if(value.contains(TO_TRANSLATE))
-                    value = originalValues[QStringView{value}.left(2).toInt()].trimmed();
+                    value = originalValues[QStringView{value}.left(2).toString().toInt()].trimmed();
             saveArrayInput(input.settingsId, values);
          break;
     }

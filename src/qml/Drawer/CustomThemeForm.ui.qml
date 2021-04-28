@@ -16,8 +16,8 @@ MenuPage {
 
     MenuSlider {
         id: hueSlider
-        maximumValue: 1.0
-        minimumValue: 0.0
+        to: 1.0
+        from: 0.0
         value: ThemeInfo.hueValue
         anchors.top: sliderHLabel.bottom
     }
@@ -32,10 +32,9 @@ MenuPage {
 
     MenuSlider {
         id: lightSlider
-        maximumValue: 0.3
-        minimumValue: -0.3
+        to: 0.3
+        from: -0.3
         value: ThemeInfo.backgroundLightness
         anchors.top: sliderLLabel.bottom
     }
-
 }

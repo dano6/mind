@@ -1,4 +1,4 @@
-import QtQuick 2.14
+import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import "."
@@ -100,7 +100,7 @@ MenuPage {
                         anchors.bottom: parent.bottom
                         visible: twoInputs
                         Connections {
-                        onTextChanged: checkContact(index)}
+                            onTextChanged: checkContact(index)}
                     }
                 }
             }
@@ -118,9 +118,7 @@ MenuPage {
                     MouseArea {
                         anchors.fill: parent
                         Connections {
-                           function onClicked() {
-                                remove(index)
-                            }
+                            onClicked: remove(index)
                         }
                     }
                 }

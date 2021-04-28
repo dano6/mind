@@ -1,7 +1,7 @@
 import QtQuick 2.5
 import QtGraphicalEffects 1.0
 import QtQuick.Particles 2.12
-import QtQuick.Shapes 1.14
+import QtQuick.Shapes 1.12
 
 import ".."
 

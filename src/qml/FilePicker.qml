@@ -1,6 +1,6 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
-import Qt.labs.folderlistmodel 2.14
+import QtQuick 2.12
+import QtQuick.Controls 2.12
+import Qt.labs.folderlistmodel 2.12
 import Qt.labs.platform 1.1
 import io.qt.UserDataProvider 1.0
 import io.qt.NativeInterface 1.0
